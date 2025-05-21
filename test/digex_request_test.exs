@@ -39,7 +39,7 @@ defmodule DigexRequestTest do
     end)
 
     req = DigexRequest.new(:get, "#{url(bypass.port)}/resource", "admin", "username")
-    assert {:ok, %{status: 200, body: ~s<{"status": "ok"}>}, _} = client.request(req)
+    assert {:ok, %{status: 200, body: ~c<{"status": "ok"}>}, _} = client.request(req)
   end
 
   test "returns other responses without retrying", %{bypass: bypass, client: client} do

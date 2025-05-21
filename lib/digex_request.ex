@@ -75,7 +75,7 @@ defmodule DigexRequest do
            %DigexRequest.Response{
              status: elem(status, 1),
              headers: headers,
-             body: to_string(body)
+             body: body
            }}
         end
       end
